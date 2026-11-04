@@ -7,7 +7,7 @@
 On GitHub: **New repository** → name `portfolio` → Public → do **not** add a README (you already have one) → **Create**.
 
 ```bash
-git remote add origin https://github.com/<your-username>/portfolio.git
+git remote add origin https://github.com/<shriyamgupta14-sys>/portfolio.git
 git remote -v
 git push -u origin main
 ```
@@ -20,7 +20,7 @@ git push -u origin main
 A responsive personal portfolio website built with HTML and CSS.
 
 ## Live Demo
-https://<your-username>.github.io/portfolio/
+https://<shriyamgupta14-sys>.github.io/portfolio/
 
 ## Features
 - Semantic HTML5 structure
@@ -48,7 +48,7 @@ cd portfolio
 ```
 
 ## Author
-**Your Name** – [GitHub](https://github.com/<your-username>)
+**Shriyam Gupta** – [GitHub](https://github.com/<shriyamgupta14-sys>)
 ````
 
 Commit it:
