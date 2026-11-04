@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Daily Dev – Newspaper Layout (CSS Grid)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="paper">
+
+    <header class="masthead">
+      <p class="date"><time datetime="2026-11-04">Wednesday, 4 November 2026</time></p>
+      <h1>The Daily Dev</h1>
+      <p class="motto">All the news that fits in a grid</p>
+    </header>
+
+    <nav class="sections" aria-label="Sections">
+      <a href="#">Front Page</a>
+      <a href="#">Tech</a>
+      <a href="#">Design</a>
+      <a href="#">Opinion</a>
+      <a href="#">Sport</a>
+    </nav>
+
+    <article class="lead-story">
+      <h2>CSS Grid Changes How We Build Pages</h2>
+      <p class="byline">By Staff Reporter</p>
+      <p>Developers are moving away from floats and positioning hacks. With a few lines of Grid, an entire page layout can be described in rows and columns, then rearranged for any screen size.</p>
+      <p>The newspaper layout below places a wide headline across all three columns, with stories flowing in a left rail, a centre column and a right rail.</p>
+    </article>
+
+    <aside class="left-rail">
+      <h3>In Brief</h3>
+      <ul>
+        <li>Flexbox for components, Grid for pages.</li>
+        <li>Named grid areas make CSS readable.</li>
+        <li>Responsive layouts need fewer media queries.</li>
+      </ul>
+    </aside>
+
+    <article class="story story-main">
+      <h3>Why Named Areas Matter</h3>
+      <p>Using <code>grid-template-areas</code>, the layout reads like a sketch of the page. Moving a block is as simple as editing one string.</p>
+      <p>The centre column is the widest, which keeps the main reading line comfortable while side columns carry supporting content.</p>
+    </article>
+
+    <aside class="right-rail">
+      <h3>Weather</h3>
+      <p>Sunny with a high chance of clean code.</p>
+      <h3>Quote of the Day</h3>
+      <p><em>“Layout is just rows and columns.”</em></p>
+    </aside>
+
+    <article class="story story-wide">
+      <h3>Opinion: Stop Fighting the Layout</h3>
+      <p>When a page has both rows and columns, reach for Grid first. It removes wrappers, spacing hacks and fragile widths.</p>
+    </article>
+
+    <footer class="colophon">
+      <p><small>&copy; 2026 The Daily Dev – a CSS Grid exercise.</small></p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

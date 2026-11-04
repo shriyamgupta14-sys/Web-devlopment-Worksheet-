@@ -1,0 +1,70 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #1b2559;
+  background: #f4f7fc;
+}
+
+.page-header { text-align: center; padding: 32px 16px 8px; }
+.page-header h1 { margin: 0; }
+
+/* ---------- The grid ---------- */
+.projects {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px;
+
+  display: grid;
+  /* as many 240px+ columns as fit; they stretch to fill the row */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: minmax(170px, auto);     /* consistent row height */
+  grid-auto-flow: dense;                   /* back-fill gaps left by spanning items */
+  gap: 18px;
+}
+
+/* ---------- Cards ---------- */
+.project {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+}
+.project h2 { margin: 0 0 6px; font-size: 1.2rem; }
+.project p { margin: 0; flex-grow: 1; }
+.project a { color: #fff; font-weight: bold; text-decoration: none; margin-top: 10px; }
+.project a:hover { text-decoration: underline; }
+
+.c1 { background: #1a6bff; }
+.c2 { background: #0f8f6b; }
+.c3 { background: #7a4dd6; }
+.c4 { background: #d9622b; }
+.c5 { background: #c43c78; }
+
+.tag {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, .25);
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: .75rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* ---------- Spanning items ---------- */
+.featured { grid-column: span 2; grid-row: span 2; }   /* 2 x 2 */
+.featured h2 { font-size: 1.8rem; }
+.featured p  { font-size: 1.05rem; }
+.wide { grid-column: span 2; }                         /* 2 columns */
+.tall { grid-row: span 2; }                            /* 2 rows */
+
+/* On a single-column layout, spanning columns would create phantom columns */
+@media (max-width: 559px) {
+  .projects { grid-template-columns: 1fr; }
+  .featured, .wide { grid-column: auto; }
+  .featured { grid-row: auto; }
+}

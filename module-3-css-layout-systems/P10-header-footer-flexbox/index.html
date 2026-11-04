@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Header &amp; Footer (Advanced Flexbox)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="#">YN<span>.</span></a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Blog</a>
+    </nav>
+
+    <a class="cta" href="#">Hire me</a>
+  </header>
+
+  <main>
+    <h1>Advanced Flexbox: header and footer</h1>
+    <p>The header uses <code>justify-content</code>, <code>align-items</code> and <code>margin-inline: auto</code>. The footer stays at the bottom of the viewport even though this page has little content (sticky footer with a column flex body).</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-columns">
+      <section class="footer-brand">
+        <h2>YN.</h2>
+        <p>Building clean, responsive websites.</p>
+      </section>
+
+      <section>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://github.com/shriyamgupta14-sys">GitHub</a></li>
+          <li><a href="mailto:you@example.com">Email</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="footer-bottom">
+      <p><small>&copy; 2026 Your Name</small></p>
+      <p><small><a href="#">Privacy</a> · <a href="#">Terms</a></small></p>
+    </div>
+  </footer>
+
+</body>
+</html>

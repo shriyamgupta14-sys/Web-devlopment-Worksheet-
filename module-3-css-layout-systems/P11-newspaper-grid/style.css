@@ -1,0 +1,93 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 16px;
+  background: #e9e4d8;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #1c1c1c;
+  line-height: 1.6;
+}
+
+.paper {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fbf8f1;
+  padding: 24px;
+  border: 1px solid #c9c2b0;
+
+  /* ---------- CSS Grid: 3 columns ---------- */
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;      /* left rail | centre | right rail */
+  gap: 24px;
+  grid-template-areas:
+    "masthead masthead masthead"
+    "sections sections sections"
+    "lead     lead     lead"
+    "left     main     right"
+    "wide     wide     wide"
+    "colophon colophon colophon";
+}
+
+.masthead   { grid-area: masthead; text-align: center; border-bottom: 4px double #1c1c1c; padding-bottom: 12px; }
+.sections   { grid-area: sections; }
+.lead-story { grid-area: lead; }
+.left-rail  { grid-area: left; }
+.story-main { grid-area: main; }
+.right-rail { grid-area: right; }
+.story-wide { grid-area: wide; }
+.colophon   { grid-area: colophon; text-align: center; border-top: 1px solid #1c1c1c; padding-top: 8px; }
+
+/* ---------- Typography ---------- */
+.masthead h1 { font-size: clamp(2.2rem, 7vw, 4.5rem); margin: 4px 0; letter-spacing: 2px; }
+.date, .motto { margin: 0; font-style: italic; font-size: .9rem; }
+
+.sections { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; border-bottom: 1px solid #1c1c1c; padding-bottom: 8px; }
+.sections a { color: #1c1c1c; text-decoration: none; text-transform: uppercase; font-size: .8rem; letter-spacing: 1px; }
+.sections a:hover { text-decoration: underline; }
+
+.lead-story h2 { font-size: 2.2rem; line-height: 1.15; margin: 0 0 4px; }
+.byline { font-style: italic; color: #555; margin-top: 0; }
+
+/* two text columns inside the lead story on wide screens */
+.lead-story p:not(.byline) { column-count: 1; }
+
+h3 { margin: 0 0 6px; font-size: 1.2rem; border-bottom: 1px solid #c9c2b0; padding-bottom: 4px; }
+
+.left-rail, .right-rail { border-inline: 1px solid #c9c2b0; padding-inline: 16px; }
+.left-rail ul { padding-left: 18px; margin: 0; }
+code { background: #ece6d6; padding: 0 4px; }
+
+.story-wide { border-top: 1px solid #c9c2b0; padding-top: 12px; }
+
+/* ---------- Tablet: collapse to 2 columns ---------- */
+@media (max-width: 900px) {
+  .paper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "masthead masthead"
+      "sections sections"
+      "lead     lead"
+      "main     main"
+      "left     right"
+      "wide     wide"
+      "colophon colophon";
+  }
+}
+
+/* ---------- Phone: single column ---------- */
+@media (max-width: 560px) {
+  .paper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "masthead"
+      "sections"
+      "lead"
+      "main"
+      "left"
+      "right"
+      "wide"
+      "colophon";
+  }
+  .left-rail, .right-rail { border-inline: 0; padding-inline: 0; }
+}

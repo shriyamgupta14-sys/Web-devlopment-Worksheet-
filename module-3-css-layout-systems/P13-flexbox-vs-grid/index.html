@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox + Grid in One Layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- GRID: page-level layout (rows AND columns) -->
+  <div class="page">
+
+    <!-- FLEXBOX: one-dimensional row of items -->
+    <header class="page-header">
+      <a class="logo" href="#">YN.</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <aside class="sidebar">
+      <h2>Topics</h2>
+      <!-- FLEXBOX: wrapping list of tags -->
+      <ul class="tags">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Git</li>
+        <li>Flexbox</li>
+        <li>Grid</li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <h1>Which one should I use?</h1>
+      <p>This page is a single layout that uses <strong>both</strong> systems, each where it fits best. Read <code>DECISION.md</code> for the reasoning.</p>
+
+      <!-- GRID: two-dimensional card grid -->
+      <section class="card-grid" aria-label="Examples">
+        <article class="card">
+          <h2>Page frame</h2>
+          <p>Header, sidebar, content and footer sit in rows <em>and</em> columns → <strong>Grid</strong>.</p>
+          <!-- FLEXBOX inside a card: push the button to the bottom -->
+          <div class="card-actions"><a href="#">Learn more</a><span>Grid</span></div>
+        </article>
+        <article class="card">
+          <h2>Navbar</h2>
+          <p>A single row of links with spacing and alignment → <strong>Flexbox</strong>.</p>
+          <div class="card-actions"><a href="#">Learn more</a><span>Flexbox</span></div>
+        </article>
+        <article class="card">
+          <h2>Card gallery</h2>
+          <p>Equal columns that auto-fit the width → <strong>Grid</strong>.</p>
+          <div class="card-actions"><a href="#">Learn more</a><span>Grid</span></div>
+        </article>
+        <article class="card">
+          <h2>Tag list</h2>
+          <p>Items that wrap naturally by content size → <strong>Flexbox</strong>.</p>
+          <div class="card-actions"><a href="#">Learn more</a><span>Flexbox</span></div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p><small>&copy; 2026 Your Name</small></p>
+      <p><small>Grid for the page, Flexbox for the parts.</small></p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
