@@ -1,0 +1,102 @@
+/* ============ 1. DESIGN TOKENS ============ */
+:root {
+  /* colour */
+  --color-primary: #1a6bff;
+  --color-primary-dark: #0f4fcc;
+  --color-accent: #ff8a1f;
+  --color-success: #1f9d55;
+  --color-danger: #d64545;
+  --color-text: #1b2559;
+  --color-muted: #5b6694;
+  --color-bg: #f4f7fc;
+  --color-surface: #ffffff;
+  --color-border: #dde6f5;
+
+  /* typography */
+  --font-sans: "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, monospace;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.75rem;
+  --weight-regular: 400;
+  --weight-bold: 700;
+  --leading-tight: 1.2;
+  --leading-normal: 1.6;
+
+  /* spacing (4px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+
+  /* shape */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-sm: 0 2px 6px rgba(15, 31, 92, .1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #e7ecff;
+    --color-muted: #a3afd9;
+    --color-bg: #0c1330;
+    --color-surface: #16204a;
+    --color-border: #2a3870;
+  }
+}
+
+/* ============ 2. BASE ============ */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+h1, h2, h3 { line-height: var(--leading-tight); margin: 0; }
+h1 { font-size: var(--text-3xl); }
+h2 { font-size: var(--text-2xl); }
+h3 { font-size: var(--text-xl); }
+p  { margin: 0; }
+code { font-family: var(--font-mono); background: var(--color-border); padding: 0 var(--space-1); border-radius: var(--radius-sm); }
+
+/* ============ 3. LAYOUT HELPERS ============ */
+.container { max-width: 760px; margin: 0 auto; padding: var(--space-5) var(--space-3); }
+.stack > * + * { margin-top: var(--space-3); }
+
+/* ============ 4. TYPOGRAPHY UTILITIES ============ */
+.eyebrow { font-size: var(--text-sm); text-transform: uppercase; letter-spacing: .1em; color: var(--color-primary); font-weight: var(--weight-bold); }
+.lead { font-size: var(--text-lg); color: var(--color-muted); }
+.text-xs { font-size: var(--text-xs); }
+.text-sm { font-size: var(--text-sm); }
+.text-base { font-size: var(--text-base); }
+.text-lg { font-size: var(--text-lg); }
+.demo { color: var(--color-primary); }
+
+/* ============ 5. COMPONENTS ============ */
+.swatches { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.swatches li { color: #fff; padding: var(--space-3); border-radius: var(--radius-md); min-width: 110px; text-align: center; font-size: var(--text-sm); }
+.swatches li.light { color: var(--color-text); border: 1px solid var(--color-border); }
+
+.space-row { display: flex; align-items: center; gap: var(--space-3); }
+.space-row span { width: 70px; font-size: var(--text-sm); color: var(--color-muted); }
+.space-row i { display: block; height: 16px; background: var(--color-primary); border-radius: var(--radius-sm); }
+
+.card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); padding: var(--space-4); }
+.card h3 { margin-bottom: var(--space-2); }
+.card p { margin-bottom: var(--space-3); }
+
+.btn { display: inline-block; padding: var(--space-2) var(--space-4); background: var(--color-primary); color: #fff; text-decoration: none; border-radius: var(--radius-sm); font-weight: var(--weight-bold); border: 2px solid var(--color-primary); }
+.btn:hover { background: var(--color-primary-dark); border-color: var(--color-primary-dark); }
+.btn-outline { background: transparent; color: var(--color-primary); }
+.btn-outline:hover { color: #fff; }

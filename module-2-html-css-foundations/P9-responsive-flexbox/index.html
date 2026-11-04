@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar &amp; Card Grid (Flexbox)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a class="brand" href="#">My Portfolio</a>
+
+    <!-- CSS-only hamburger: checkbox + label -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">Skills</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Projects</h1>
+    <p class="subtitle">Resize the window: 1 card per row on phones, 2 on tablets, 3 on desktops.</p>
+
+    <section class="cards">
+      <article class="card">
+        <h2>Student Profile Site</h2>
+        <p>Team project using Git branches and Pull Requests.</p>
+        <a class="btn" href="#">View</a>
+      </article>
+      <article class="card">
+        <h2>Portfolio Page</h2>
+        <p>Semantic HTML with a responsive layout.</p>
+        <a class="btn" href="#">View</a>
+      </article>
+      <article class="card">
+        <h2>Design Tokens</h2>
+        <p>A typography and colour system in CSS variables.</p>
+        <a class="btn" href="#">View</a>
+      </article>
+      <article class="card">
+        <h2>Sticky Navbar</h2>
+        <p>Position sticky with overlay cards.</p>
+        <a class="btn" href="#">View</a>
+      </article>
+      <article class="card">
+        <h2>Newspaper Layout</h2>
+        <p>Three columns built with CSS Grid.</p>
+        <a class="btn" href="#">View</a>
+      </article>
+    </section>
+  </main>
+
+</body>
+</html>

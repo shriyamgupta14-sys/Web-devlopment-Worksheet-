@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Tokens &amp; Typography System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container stack">
+
+    <header>
+      <p class="eyebrow">Design system</p>
+      <h1>Design Tokens &amp; Typography</h1>
+      <p class="lead">Every colour, size and space on this page comes from a CSS custom property declared once in <code>:root</code>.</p>
+    </header>
+
+    <section class="stack">
+      <h2>Type scale</h2>
+      <p class="text-xs">text-xs – 0.75rem – caption and legal text</p>
+      <p class="text-sm">text-sm – 0.875rem – secondary text</p>
+      <p class="text-base">text-base – 1rem – body copy</p>
+      <p class="text-lg">text-lg – 1.25rem – lead paragraph</p>
+      <h3>h3 – 1.5rem – subsection heading</h3>
+      <h2 class="demo">h2 – 2rem – section heading</h2>
+      <h1 class="demo">h1 – 2.75rem – page title</h1>
+    </section>
+
+    <section class="stack">
+      <h2>Colour tokens</h2>
+      <ul class="swatches">
+        <li style="background: var(--color-primary)">primary</li>
+        <li style="background: var(--color-primary-dark)">primary-dark</li>
+        <li style="background: var(--color-accent)">accent</li>
+        <li style="background: var(--color-success)">success</li>
+        <li style="background: var(--color-danger)">danger</li>
+        <li class="light" style="background: var(--color-surface)">surface</li>
+      </ul>
+    </section>
+
+    <section class="stack">
+      <h2>Spacing scale</h2>
+      <div class="space-row"><span>space-1</span><i style="width: var(--space-1)"></i></div>
+      <div class="space-row"><span>space-2</span><i style="width: var(--space-2)"></i></div>
+      <div class="space-row"><span>space-3</span><i style="width: var(--space-3)"></i></div>
+      <div class="space-row"><span>space-4</span><i style="width: var(--space-4)"></i></div>
+      <div class="space-row"><span>space-5</span><i style="width: var(--space-5)"></i></div>
+      <div class="space-row"><span>space-6</span><i style="width: var(--space-6)"></i></div>
+    </section>
+
+    <section class="stack">
+      <h2>Components using tokens</h2>
+      <article class="card">
+        <h3>Card title</h3>
+        <p>Radius, shadow, padding and colours are all tokens.</p>
+        <a class="btn" href="#">Primary action</a>
+        <a class="btn btn-outline" href="#">Secondary</a>
+      </article>
+    </section>
+
+  </main>
+</body>
+</html>

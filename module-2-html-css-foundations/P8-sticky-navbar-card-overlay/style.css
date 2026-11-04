@@ -1,0 +1,124 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #1b2559;
+  background: #f4f7fc;
+}
+
+/* ---------- Sticky navbar ---------- */
+.navbar {
+  position: sticky;      /* sticks once you scroll past it */
+  top: 0;
+  z-index: 100;          /* stays above cards and overlays */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: #0f1f5c;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+}
+.brand { color: #fff; font-weight: bold; font-size: 1.2rem; text-decoration: none; }
+.navbar nav a { color: #fff; margin-left: 18px; text-decoration: none; }
+.navbar nav a:hover { text-decoration: underline; }
+
+/* ---------- Page ---------- */
+main { max-width: 1000px; margin: 0 auto; padding: 24px 16px; }
+.intro { text-align: center; padding: 24px 0; }
+code { background: #dde6f5; padding: 0 4px; border-radius: 4px; }
+
+.filler {
+  min-height: 70vh;      /* makes the page scroll */
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  margin-top: 24px;
+}
+
+/* ---------- Cards with overlay ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  position: relative;    /* positioning context for badge + overlay */
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
+}
+
+.thumb { height: 160px; }
+.thumb-1 { background: linear-gradient(135deg, #1a6bff, #6fa3ff); }
+.thumb-2 { background: linear-gradient(135deg, #ff8a1f, #ffc37a); }
+.thumb-3 { background: linear-gradient(135deg, #1f9d55, #7ad6a1); }
+
+.card-body { padding: 16px; }
+.card-body h2 { margin: 0 0 4px; font-size: 1.2rem; }
+.card-body p { margin: 0; }
+
+/* badge pinned to the top-right corner */
+.badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  background: #d64545;
+  color: #fff;
+  font-size: .75rem;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.badge-alt { background: #ff8a1f; }
+
+/* overlay covering the entire card, hidden until hover/focus */
+.overlay {
+  position: absolute;
+  inset: 0;              /* top/right/bottom/left: 0 */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 31, 92, .88);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+.card:hover .overlay,
+.card:focus-within .overlay { opacity: 1; }
+
+.overlay a {
+  background: #fff;
+  color: #1a6bff;
+  padding: 8px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ---------- Fixed back-to-top button ---------- */
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: #1a6bff;
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.3rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+}
+
+html { scroll-behavior: smooth; }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Navbar &amp; Card Overlay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a class="brand" href="#top">My Portfolio</a>
+    <nav aria-label="Primary">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="intro">
+      <h1>Scroll down – the navbar stays put</h1>
+      <p>The navbar uses <code>position: sticky</code>. The cards below use <code>position: relative</code> with absolutely positioned badges and hover overlays.</p>
+    </section>
+
+    <section id="projects" class="cards">
+      <article class="card">
+        <span class="badge">New</span>
+        <div class="thumb thumb-1"></div>
+        <div class="card-body">
+          <h2>Portfolio Site</h2>
+          <p>Semantic HTML and responsive CSS.</p>
+        </div>
+        <div class="overlay">
+          <p>Built with HTML5 &amp; CSS3</p>
+          <a href="#">View project</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="badge badge-alt">Popular</span>
+        <div class="thumb thumb-2"></div>
+        <div class="card-body">
+          <h2>CSS Grid Layout</h2>
+          <p>A newspaper-style page.</p>
+        </div>
+        <div class="overlay">
+          <p>Grid areas &amp; responsive columns</p>
+          <a href="#">View project</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb thumb-3"></div>
+        <div class="card-body">
+          <h2>Flexbox Navbar</h2>
+          <p>Mobile-friendly navigation.</p>
+        </div>
+        <div class="overlay">
+          <p>Flexbox &amp; media queries</p>
+          <a href="#">View project</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="about" class="filler"><h2>About</h2><p>Extra content so the page is long enough to scroll.</p></section>
+    <section id="contact" class="filler"><h2>Contact</h2><p>you@example.com</p></section>
+  </main>
+
+  <a class="to-top" href="#top" aria-label="Back to top">↑</a>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal bio page built with semantic HTML5 elements.">
+  <title>Bio – Your Name</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Your Name</h1>
+    <p class="tagline">Aspiring Full-Stack Developer</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <section id="about">
+        <h2>About Me</h2>
+        <figure>
+          <svg role="img" aria-label="Profile picture placeholder" viewBox="0 0 120 120" width="120" height="120">
+            <circle cx="60" cy="60" r="60" fill="#1a6bff"/>
+            <circle cx="60" cy="46" r="20" fill="#fff"/>
+            <path d="M20 108c6-26 26-36 40-36s34 10 40 36z" fill="#fff"/>
+          </svg>
+          <figcaption>A photo of me (placeholder)</figcaption>
+        </figure>
+        <p>Hello! I am a student at <abbr title="Bosscoder School of Technology">Bosscoder</abbr> learning web development. I enjoy turning ideas into clean, accessible web pages.</p>
+        <blockquote>
+          <p>Make it work, make it right, make it fast.</p>
+          <footer>— Kent Beck</footer>
+        </blockquote>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <ol>
+          <li>
+            <h3>Web Development Program</h3>
+            <p>Bosscoder School of Technology — <time datetime="2026-08">August 2026</time> to present</p>
+          </li>
+          <li>
+            <h3>Higher Secondary</h3>
+            <p>Completed in <time datetime="2025">2025</time></p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="interests">
+        <h2>Interests</h2>
+        <ul>
+          <li>Web development</li>
+          <li>Open-source projects</li>
+          <li>Problem solving</li>
+        </ul>
+      </section>
+    </article>
+
+    <aside>
+      <h2>Quick Facts</h2>
+      <dl>
+        <dt>Location</dt>
+        <dd>India</dd>
+        <dt>Currently learning</dt>
+        <dd>HTML, CSS, Git &amp; GitHub</dd>
+      </dl>
+    </aside>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <address>
+      Contact: <a href="mailto:you@example.com">you@example.com</a><br>
+      GitHub: <a href="https://github.com/shriyamgupta14-sys">shriyamgupta14-sys</a>
+    </address>
+    <p><small>&copy; 2026 Your Name. All rights reserved.</small></p>
+  </footer>
+
+</body>
+</html>
