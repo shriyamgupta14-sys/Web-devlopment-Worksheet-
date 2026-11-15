@@ -8,10 +8,9 @@ body {
   background: #f4f7fc;
 }
 
-/* ---------- Navbar (mobile first) ---------- */
 .navbar {
   display: flex;
-  flex-wrap: wrap;                 /* lets the links drop below on mobile */
+  flex-wrap: wrap;                
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
@@ -19,7 +18,7 @@ body {
 }
 .brand { color: #fff; font-weight: bold; font-size: 1.2rem; text-decoration: none; }
 
-.menu-toggle { display: none; }   /* hide the checkbox */
+.menu-toggle { display: none; }  
 
 .hamburger {
   display: flex;
@@ -30,7 +29,7 @@ body {
 .hamburger span { width: 26px; height: 3px; background: #fff; border-radius: 2px; }
 
 .nav-links {
-  display: none;                   /* collapsed on mobile */
+  display: none;                 
   flex-direction: column;
   width: 100%;
   margin-top: 10px;
@@ -43,10 +42,8 @@ body {
 }
 .nav-links a:hover { color: #8fb5ff; }
 
-/* checkbox checked -> show menu */
 .menu-toggle:checked ~ .nav-links { display: flex; }
 
-/* ---------- Cards (mobile first) ---------- */
 main { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
 .subtitle { color: #5b6694; }
 
@@ -58,7 +55,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
 }
 
 .card {
-  flex: 1 1 100%;                  /* 1 per row on phones */
+  flex: 1 1 100%;                 
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -67,8 +64,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
   box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
 }
 .card h2 { margin-top: 0; font-size: 1.2rem; color: #1a6bff; }
-.card p { flex-grow: 1; }          /* pushes the button to the bottom */
-
+.card p { flex-grow: 1; }         
 .btn {
   align-self: flex-start;
   background: #1a6bff;
@@ -79,12 +75,10 @@ main { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
 }
 .btn:hover { background: #0f4fcc; }
 
-/* ---------- Tablet: 2 per row ---------- */
 @media (min-width: 600px) {
   .card { flex: 1 1 calc(50% - 20px); }
 }
 
-/* ---------- Desktop: horizontal nav, 3 per row ---------- */
 @media (min-width: 900px) {
   .hamburger { display: none; }
 

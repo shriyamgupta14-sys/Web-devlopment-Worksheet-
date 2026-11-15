@@ -37,15 +37,6 @@ section, aside {
 
 h2 { color: #1a6bff; border-bottom: 2px solid #1a6bff; padding-bottom: 4px; }
 
-figure { margin: 0 0 16px; text-align: center; }
-figcaption { font-size: .85rem; color: #667; }
-
-blockquote {
-  margin: 16px 0;
-  padding-left: 16px;
-  border-left: 4px solid #1a6bff;
-  font-style: italic;
-}
 
 dt { font-weight: bold; }
 dd { margin: 0 0 8px; }
